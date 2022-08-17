@@ -1,0 +1,109 @@
+"""
+programação estruturada
+2022.2
+15/08/2022
+aula 2
+Operadores 
+"""
+
+#Operadores aritmeticos 
+x = 2
+y = 5
+print(x + y)
+print(x - y)
+print(x * y)
+print(x / y)
+print(x % y) # resto da divisao 
+print(x // y) # divisao inteira 
+print(x ** y) # potencia 
+
+#Precedencia 
+# **
+# * / % //
+# + -
+
+#concatenaçao de strings
+# só posso concatenar string com string 
+print("Texto 1" + "Texto2")
+#print("Texto1" + 2) -> Erro!
+print("Texto 1"+ str(2))
+
+#Str, int vezes 
+print("-"* 15)
+
+#Operadores relacionais 
+#Retornam sempre bool 
+print(x > y)
+print(x >= y)
+print(x < y)
+print(x <= y)
+print(x == y) # igualdade
+print(x != y) # desigualdade 
+
+print("-"* 15 + " Exemplo de operadores relacionais ") 
+
+print("abc" > "def") # False
+print("abc" > "aae") # True
+print("abc" == "abc") # True
+print("ab" > "abc") # False
+print("A" > "a") # False
+
+print("-"* 15)
+
+
+#Operadores Logicos 
+# Os operandos são bool 
+# O resultado é bool
+x = True
+y = False
+print(x and y) # True se ambos forem True, (&&) em c igual e (e).
+print(x or y) # True se pelo menos um for True, (||) em c igual a (ou).
+print(not x) # Inverte o valor de x.
+
+print("-"* 15)
+
+#Exercicio 1
+# Media ponderada
+"""
+Programa que pede 3 notas e mostra a media.
+"""
+ap1 = float(
+  input("informe nota ap1 "))
+ap2 = float(
+  input("informe nota ap2 "))
+ac = float(
+  input("informe nota ac "))
+
+media = 0.4 * (ap1 + ap2) + 0.2 * ac
+
+print("a media eh", round(media,2))
+
+print("-"* 15)
+
+#Exercicio 2
+"""
+converter Metro para centimetro 
+"""
+metro = float(input(" Digitar comprimento em metro "))
+cm = (metro*100)
+print("o valor em cm eh", cm)
+
+print("-"* 15)
+
+#Exercicio 3
+"""
+Faça um programa que leia o raio de um círculo
+"""
+raio = float(input(" Digite raio do circulo "))
+area_circulo = (raio**2 * 3.14)
+print("A area do circulo eh", round(area_circulo,2))
+
+print("-"* 15)
+
+#Exercicio 4
+"""
+Monte um conversor de temperatura, que lê uma temperatura em graus Fahrenheit e mostre a temperatura em graus Celsius.
+"""
+fahr = float(
+  input("Informe a temp. em fahr.:"))
+print("A temp em Celsius eh", round((fahr - 32) * 5/9, 2))

@@ -1,0 +1,72 @@
+"""
+docstring 
+este é um comentario com varias linhas.
+
+programação estruturada
+2022.2
+10/08/2022
+aula 1
+Introdução ao Python 
+"""
+
+# este é um comentario de linha 
+
+print("Olá, mundo!")
+print("Olá,","mundo!", sep="-", end="\n\n")
+print("Olá, mundo!")
+
+#tipos de dados
+
+#String
+print("Oi")
+print('Oi')
+
+print("Este é um texto com 'aspas'")
+print('Este é um texto com "aspas"')
+print("Este é um texto com \"aspas\"")
+print("contrabarra \\")
+
+#int
+print(5)
+print(8)
+
+#float
+print(6.8)
+print(3.4444)
+
+#bool
+print(True)   # 1
+print(False)  # 0
+
+nome = "Victor"
+nome = "Victor Machado"
+nome_completo = "Victor Machado"
+
+print(nome)
+
+nome = "Victor"
+sobrenome = "Machado"
+nome_completo = nome + " " + sobrenome
+
+print(nome_completo)
+
+nome = input("Informe o seu nome: ")
+print(nome)
+
+print("-"* 15)
+
+#exercicio 1
+numero = input("informe o numero: ")
+print("O numero informado foi:",numero, end="\n")
+
+#exercicio 2
+nome = input("informe o nome: ")
+print("prazer, ",nome, " eu sou Python!", sep="")
+
+#exercicio extra 
+#leia dois numeros e informe a soma
+
+numero1 = int(input("informe o numero: "))
+numero2 = int(input("informe o numero: "))
+soma = numero1 + numero2
+print("a soma é:", soma)

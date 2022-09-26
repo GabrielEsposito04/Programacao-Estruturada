@@ -1,0 +1,41 @@
+"""
+Programação Estruturada
+2022.2
+19/09/2022
+
+Módulos em Python
+Leitura e escrita de arquivos
+"""
+import json
+
+arquivo = open("Exemplo.txt", "w")
+
+arquivo.write("olá, mundo!\n")
+arquivo.writelines(["Texto1\n", "Texto4"])
+
+
+arquivo.close()
+
+arquivo = open("Exemplo.txt", "r")
+
+texto = arquivo.read()
+linhas = texto.split("\n")
+print(linhas)
+
+arquivo.close()
+
+with open("Exemplo.txt", "w") as arquivo:
+  arquivo.write("olá")
+
+contatos = [
+  {"nome": "aaa"},
+  {"nome": "bbb"} 
+]
+
+with open("contatos.json", "w") as arquivo:
+  json.dump(contatos, arquivo, indent=4)
+
+with open("contatos.json", "r") as arquivo:
+  novos_contatos = json.load(arquivo)
+
+print(novos_contatos)

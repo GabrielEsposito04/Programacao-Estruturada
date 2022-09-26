@@ -1,0 +1,133 @@
+"""
+Programação Estruturada
+2022.2
+12/09/2022.
+
+Estrutura de Dados
+- Tuplas
+- Conjuntos
+- Dicionários
+
+Características de listas:
+- Mutáveis
+- Ordenadas
+
+Características de Tuplas (tuples):
+- Imutáveis
+- Ordenadas
+"""
+aluno = ("Gabriel", 27)
+
+tabela = (
+  ("col_a", "col_b"),
+  (20, 30),
+  (18, 45)
+)
+
+print(len(tabela))
+print(aluno[0])
+
+def busca_coordenadas(Cidade):
+  coord_x = 45
+  coord_y = 30
+  return coord_x, coord_y
+
+coord = busca_coordenadas("Rio")
+print(coord)
+print(type(coord))
+
+"""
+Conjuntos
+- Mutável
+- Não ordenada
+- Únicos
+"""
+conj = {3, 4, 8, 1, 2, 9, 4, 12, 9, 23, 4, 18}
+print(conj)
+
+lista = {3, 4, 8, 1, 2, 9, 4, 12, 9, 23, 4, 18}
+lista = list(set(lista))
+print(lista)
+
+conj = conj.union({18, 25, 34})
+print(conj)
+
+for num in conj:
+  print(num)
+
+conj.update({45, 66, 33})
+print(conj)
+print(conj.pop())
+
+"""
+Dicionários
+- Mutáveis
+- Não ordenados
+- Únicos (Com relação ás chaves)
+- Íncidices não precisam ser numéricos (chaves)
+"""
+
+alunos = {
+  "12345": "Gabriel",
+  "67890": "Pedro",
+  "11111": "Ana",
+  "22222": "Gabriel",
+}
+
+print(alunos)
+
+alunos = {
+  "12345": {
+    "nome": "Gabriel",
+    "Data_Nasc": "04/04/1000",
+    "curso": "desenvolvedor" 
+  },
+  "67890": {
+    "nome": "Pedro",
+    "Data_Nasc": "22/22/2222",
+    "curso": "Direito" 
+  }
+}
+print(alunos["12345"])
+alunos["11111"] = {
+  "nome": "Ana",
+  "Data_nasc": "33/33/3333",
+  "curso": "Administração"
+}
+del alunos["12345"]
+print(alunos)
+
+def func(chave):
+  print("Chave", chave, "Não Existe!")
+  return 0
+  
+print(alunos.get("33333", func("33333")))
+
+"""
+alunos.keys()
+alunos.values()
+alunos.items()
+"""
+if "67890" in alunos.keys():
+  print(alunos["67890"])
+
+for aluno in alunos.values():
+  print(aluno)
+
+for matricula, alunos in alunos.items():
+  print(matricula, "-", aluno)
+"""
+Implemente a função procura_nota(), que recebe um determinado aluno nome_procurado, uma lista de alunos nomes e uma lista de notas numeros, e retorna uma tupla contendo o nome do aluno e sua nota. A função retorna -1.0 e uma mensagem que o aluno não foi encontrado caso nome_procurado não esteja em nomes.
+"""
+#EX 4
+def procura_nota(nome_procurado, nomes, notas):
+  for indice, nome in enumerate(nomes):
+    if nome == nome_procurado:
+      return nomes, notas[indice]
+
+  return "Aluno não encontrado!", -1.0 
+
+print(procura_nota("d", ["a", "b", "c"], [4, 5, 6]))
+
+    
+  

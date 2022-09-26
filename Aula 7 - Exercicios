@@ -1,0 +1,57 @@
+"""
+Programação Estruturada 
+2022.2
+31/08/2022
+"""
+#Exercicio 001
+def print_input():
+  nome = input("Informe o seu nome: ")
+  print("Prazer, ", nome, "!", sep="", end="\n\n")
+  #strA + sep + strB +   sep + strC
+#Prazer,+"  "+"Gabriel"+"   "+"!"+"\n"
+  print("Olá")
+
+  idade = int(input("Informe a idade: "))
+  print(type(idade))
+  print(100 + idade)
+  print(2 + True)
+
+#print_input()
+
+#Exercicio 002
+
+def e_primo(num):
+  div = 2
+  resultado = True
+  while div < num:
+    if num % div == 0:
+      print(num, "é divisivel por", div)
+      resultado = False
+    div += 1
+  return resultado
+#print(e_primo())
+
+#Exercicio 003
+
+def e_primo_for(num):
+  resultado = True
+  for div in range(2, num):
+    if num % div == 0:
+      #print(num, "é divisivel por", div)
+      resultado = False
+  return resultado
+""" 
+  if resultado:
+    print(num, "é primo")
+  else:
+    print(num, "Não é primo")
+"""  
+#e_primo_for(13)
+#e_primo_for(356)
+
+num_inicio = int(input("Informe um numero de inicio: "))
+num_fim = int(input("Informe um numero de final: "))
+
+for num_teste in range(num_inicio, num_fim + 1):
+  if e_primo_for(num_teste):
+    print(num_teste, "é primo")

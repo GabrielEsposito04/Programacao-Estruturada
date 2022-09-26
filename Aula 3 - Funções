@@ -1,0 +1,82 @@
+"""
+programação estruturada
+2022.2
+17/08/2022
+aula 3
+Funções 
+"""
+#soma
+def soma (x, y):
+  soma = x + y
+  return soma
+
+x = 10
+y = 10
+
+soma = soma (x, y)
+print("soma", soma)
+#subtração
+def sub (x, y):
+  sub = x - y
+  return sub
+
+x = 10
+y = 5
+
+sub = sub (x, y)
+print("sub", sub)
+
+#multiplicaçao
+def multiplicaçao (x, y):
+  multiplicaçao = x * y
+  return multiplicaçao
+
+x = 10
+y = 2
+
+multiplicaçao = multiplicaçao(x, y)
+print("multiplicaçao", multiplicaçao)
+
+#divisao
+def div (x, y):
+  div = x / y
+  return div
+
+x = 10
+y = 2
+
+div = div (x, y)
+print("div", div)
+
+#resto
+def resto (x ,y):
+  resto = x % y
+  return resto
+
+x = 10 
+y = 2 
+
+resto = resto (x, y)
+print("resto", resto)
+
+#divisao inteira 
+def divInt (x, y):
+  divInt = x // y
+  return divInt
+
+x = 10
+y = 2
+
+divInt = divInt (x, y)
+print("divInt", divInt)
+
+#potencia 
+def potencia (x, y):
+  potencia = x ** y
+  return potencia 
+
+x = 10
+y = 5
+
+potencia = potencia (x, y)
+print("potencia", potencia )

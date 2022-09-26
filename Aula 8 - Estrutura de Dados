@@ -1,0 +1,131 @@
+"""
+Programação Estruturada 
+2022.2
+Aula 8
+05/09/2022
+
+Estrutura de Dados
+- Listas(ou Arrays, ou Vetores)
+
+- Tuplas
+- Dicionários
+- Conjuntos
+"""
+
+
+lista = [3, 4.5, True, [1, 2, 3], "Texto"]
+
+alunos = ["a", "b", "c", "d", "e"]
+print(alunos[4])
+print(alunos[2])
+print(alunos[-1])
+print(alunos[-2])
+
+alunos[3] = "f"
+print(alunos)
+
+#slicing (fatiamento)
+# [start:stop:step]
+print(alunos[1:4:2])
+print(alunos[1:4])
+print(alunos[1:])
+print(alunos[:3])
+
+# in / not in 
+if "c" in alunos:
+  print("c está em alunos!")
+
+for aluno in alunos:
+  print(aluno)
+
+for indice, aluno in enumerate(alunos):
+  print(indice, aluno, sep=" - ")
+
+#append/ extend/ insert
+alunos.append("g")
+print(alunos)
+alunos.extend(["h", "i"])
+print(alunos)
+alunos.insert(3, "d")
+print(alunos)
+alunos += ["j", "k"]
+print(alunos)
+
+#pop/ remove
+nome1 = alunos.pop()
+print(alunos)
+nome2 = alunos.pop(3)
+print(alunos)
+print([nome1], [nome2])
+if "h"in alunos:
+  alunos.remove("h")
+print(alunos)
+
+# Index
+print(alunos.index("f"))# retorna o indice em que o elemento aparece pela primeira vez
+print(len(alunos))# comprimento de uma lista usa a função "len"
+
+if alunos: # verificar se alunos não é vazia
+  print("Exitem alunos na lista. ")
+
+#sort altera a ordem da lista
+alunos.sort(reverse=True)# vai ordenar os elementos dentro da lista de acordo com a tabela ascii
+print(alunos)
+
+# sorted cria uma lista nova, e mantem a lista anterior sem sobrescrever 
+alunos_ordenados = sorted(alunos)
+print(alunos)
+print(alunos_ordenados)
+
+# count # numero de ocorencia que o elemento aparece na lista 
+print(alunos.count("x"))
+print(alunos.count("a"))
+
+numeros = [1, 2, 3, 4]
+print(max(numeros))
+print(min(numeros))
+print(sum(numeros)) # soma dos elementos 
+
+# passagem por referência 
+x = [1, 2, 3]
+y = x
+x.pop()
+print(y)
+y.append(5)
+print(x)
+z = x.copy()
+
+x.append(8)
+print(z)
+
+print("-"* 30)
+
+def a():
+  global x # Não é uma boa pratica
+  x = 5
+  print(x)
+
+x = 2
+a()
+print(x)
+
+def b(lista):
+  lista.pop()
+  print(lista)
+
+lista = [1, 2, 3]
+b(lista)
+print(lista)
+
+def c(valor, p=None):
+  r = p if p is not None else []
+  r.append(valor)
+  return(r)
+
+q = c(2)
+w = c(4)
+k = c(6, [1,2,3])
+print(q)
+print(w)
+print(q)
+print(k)

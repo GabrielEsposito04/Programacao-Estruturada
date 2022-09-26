@@ -1,0 +1,125 @@
+"""
+programação Estruturada 
+2022.2
+22/08/2022
+
+Estrutura de Seleção
+if<condicao>:
+  <codigo_se_True>
+  
+elif:<condicao> = else if
+  <codigo_se_True>
+
+else:
+   <codigo_se_False>
+"""
+# Numero par e impar
+def e_par(numero):
+  """
+  Exibe na tela se o numero é par
+  """
+  if numero % 2 == 0:
+    print(numero, "é par.")
+  else:
+    print(numero, "é impar")
+
+  print("Fim da Função")
+
+e_par(8)
+e_par(5)
+print("-"* 25)
+
+# Nota 
+def conceito(nota):
+  """
+  Exibe na tela o conceito referente a nota.
+  """
+  if nota > 9:
+    print("Conceito A")
+  elif nota > 8:
+     print("Conceito B")
+  elif nota > 7:
+     print("Conceito C")
+  else: 
+     print("Conceito D")
+
+  print("Fim da Funçao.")
+  
+conceito(9.5)
+conceito(8.5)
+conceito(7.5)
+conceito(6.5)
+print("-"* 25)
+
+#Exercicio 1
+"""
+Retorna o maior dos numeros.
+"""
+
+def maior(num1, num2):
+  if num1 > num2:
+    return num1 
+  else:
+    return num2
+    
+num1 = int(input("Digite num1: "))
+num2 = int(input("Digite num2: "))
+print("O maior numero é", maior(num1,num2))
+
+print("-"* 25)      
+
+"""
+outras opçoes:
+
+def maior1(num1, num2):
+  if num1 > num2:
+    return num1
+  return num2
+
+Usando ternarios
+def maior2(num1, num2):
+  return num1 if num1 > num2 else num2
+"""
+
+#Retorne se e positivo 
+# Exercicio 2
+
+def positivo(valor):
+  
+  if valor >= 0:
+    print("Valor é positivo")
+  else:
+    print("Valor é negativo")
+
+valor = int(input("Digite o valor: "))
+positivo(valor)
+
+print("-"* 25)
+#Vogal ou consoante
+#Exercicio 3
+
+def alfa(letra):
+  if (letra == 'a'or letra == 'e'or letra == 'i'or letra == 'o'or letra == 'u'):
+    print("é vogal")
+  else:
+    print("é Consoante")
+
+letra = str(input("Digite a letra: "))
+alfa(letra)
+
+#Media 
+#Exercicio 4
+
+def resultado(nota1, nota2, nota3):
+  media = (nota1 + nota2 + nota3)/3 
+
+  if media == 10:
+    print("Aprovado com distinção")
+  elif media < 10 and media >= 7:
+    print("Aprovado")
+  elif media >= 0 and media < 7: 
+    print("Reprovado")
+  else:
+    print("Nota invalida")
+    
+resultado(7, 8, 3)

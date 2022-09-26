@@ -1,0 +1,110 @@
+"""
+Programação Estruturada
+2022.2
+24/08/2022
+
+Estrutura de Repetição
+while <condiçao>
+  <codigo_se_True>
+"""
+#contagem
+def contagem():
+  """
+  imprime de 1 a 10 na tela
+  """
+  num = 1 
+  while num < 11:
+    print(num)
+    num += 1
+
+contagem()
+print("-"*15)
+#contagem numero maximo
+def contagem(numero_maximo):
+  """
+  imprime de 1 a numero_maximo na tela
+  """
+  num = 1 
+  while num < numero_maximo + 1:
+    print(num)
+    num += 1
+
+contagem(5)
+print("-"*15)
+#contagem numero maximo
+def contagem(numero_minimo,numero_maximo):
+  """
+  imprime de numero_minimo a numero_maximo na tela
+  """
+   
+  while numero_minimo <=  numero_maximo :
+    print(numero_minimo)
+    numero_minimo += 1
+
+contagem(2, 5)
+print("-"*15)
+"""
+#incrementa de min a max, usando incremento. exibe todos os valores na mesma linha, separados por hifen.
+
+2-4-6-8
+"""
+def incremento(num_min, num_max):
+  while num_min <= num_max :
+    print(str (num_min) + "-", end ="")
+    num_min += 2
+
+incremento(2, 8)
+
+"""
+while min <= max:
+  if min + inc > max
+    print(min)
+  else:
+    print(min, end=" - ")
+    min += inc
+
+conta(2, 8, 2)
+"""
+"""
+imprime todos os pares entre min e max a exibição é como na função conta().
+"""
+def conta_pares(min, max):
+  
+  if min%2 == 1: 
+    min += 1
+  conta_pares(min, max, 2)
+    
+
+conta_pares(2, 8)
+conta_pares(1, 8)
+conta_pares(2, 9)
+conta_pares(1, 9)
+"""
+repete o texto inserido pelo usuario, ate que seja pressionado ENTER.
+"""
+def repete_texto():
+  while true:
+    texto = input("Informe um texto: ")
+    print(texto)
+    if texto == "":
+      break
+    print(texto)
+
+  print("Ate logo")
+
+repete_texto()
+"""
+Faça um programa que peça um nome de usuário e a sua senha, exiba uma mensagem de erro e retorne False caso os dois valores sejam iguais e retorne True caso sejam valores diferentes. O programa deve continuar pedindo uma nova senha até que o valor seja válido.
+"""
+
+def Inform(nome, senha):
+
+  nome = input("Informe o nome: ")
+  print(nome)
+  senha = input("Informe a senha: ")
+  print(senha)
+  if nome == senha:
+    return False
+  else:
+    senha = input("Informe a senha: ")
+    print(senha)

@@ -1,0 +1,38 @@
+"""
+Programação Estruturada
+2022.2
+14/09/2022
+"""
+import random
+
+lista = [1,2,3,4,5,6]
+# Embaralha os elementos de lista
+random.shuffle(lista)
+
+# Compreensão de listas
+#list comprehension
+lista.sort()
+quadrados = []
+# [1,4,9,16,25,36]
+for num in lista:
+  quadrados.append(num ** 2)
+
+print(quadrados)
+quadrado = [num ** 2 for num in lista]
+quadrado = [num ** 2 for num in lista if not num % 2]
+print(quadrados)
+
+quadrados = {
+  num: num ** 2
+  for num in lista
+  if not num % 2 == 0
+}
+print (quadrados)
+
+matriz = [[1, 2],[3, 4],[5, 6]]
+vetor = [num for elem in matriz for num in elem]
+print(vetor)
+for elem in matriz:
+  for num in elem:
+    vetor.append(num)
+    print(vetor)

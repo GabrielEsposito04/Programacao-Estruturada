@@ -1,0 +1,112 @@
+"""
+programação Estruturada
+2022.2
+29/08/2022
+
+Estruturas de Repetição
+range() -> iterável (iterable)
+range(start) -> sequência de 0 a start (exclusive)
+range(start, stop) -> sequência de start a stop (exclusive)
+range(start, stop, step) -> sequência de start a stop (exclusive), com incremento de step
+
+for - sintaxe:
+
+for <var> in <iteravel>:
+  <codigo>
+"""
+# Exemplo 1
+#conta de um a num
+"""
+def contagem(num):
+  for cont in range(1, num + 1):
+    print(cont)
+"""
+# contagem(10)
+
+# Exemplo 2
+#conta de num ate um
+"""
+def contagem_regressiva(num):
+  for cont in range(num, 0, -1):
+    print(cont)
+"""
+# contagem_regressiva(10)
+
+# Exemplo 3
+# print pim a cada 3 repetiçoes 
+"""
+def outra_contagem(num):
+  for cont in range(1, num):
+    if cont % 3 == 0:
+      print("pim")
+      continue
+    print(cont)
+"""
+# outra_contagem(10)
+
+# Exemplo 4
+"""
+def outra_outra_contagem(num):
+  for cont in range(1, num + 1):
+    if cont % 7 == 0:
+      print("pim")
+      break
+    print(cont)
+  else:
+    print("Encerrou toda a contagem. ")
+"""
+# outra_outra_contagem(5)
+# outra_outra_contagem(9)
+
+# Exercicio 1 
+# EX 3 Estrutura de Repetição
+"""
+def tabuada(num):
+  for cont in range(1, 11):
+    print(str(num) + "*" + str(cont) + "=" + str(cont*num))
+
+tabuada(4)
+"""
+
+# Exercicio 2
+# Ex 2 Estrutura de Repetição
+"""
+def fatorial(num):
+  fatorial = 1;
+  for cont in range(num, 0, -1):
+    fatorial = cont*fatorial
+    print(cont, end="")
+    if cont != 1:
+      print("*", end="")
+  print("="+str(fatorial))
+
+fatorial(10)
+"""
+#fatorial feito pelo professor victor
+"""
+def fatorial(num):
+  fat = 1
+  print(num, "! = ", sep="", end="")
+  for cont in range(1, num + 1):
+    fat *= cont # fat = fat * cont
+    if cont < num:
+      print(cont, end=" * ")
+    else:
+      print(num, "=", fat)
+
+  return fat
+
+print(fatorial(6))
+"""
+
+def fatorial_rec(num):
+  if num == 1:
+    return num
+
+  return num * fatorial_rec(num - 1)
+
+print(fatorial_rec(5))
+  
+
+  
+
